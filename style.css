@@ -1,0 +1,125 @@
+:root {
+      --gold: #d4af37;
+      --black: #000000;
+      --white: #ffffff;
+      --deep-brown: #1e1a17;
+      --rich-black: #141414;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(135deg, var(--rich-black), var(--deep-brown));
+      color: var(--white);
+      min-height: 100vh;
+      height: 100%;
+    }
+
+    .video-hero {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: white;
+      text-align: center;
+      width: 100%;
+      padding: 0 1rem;
+    }
+
+    .static-title {
+      font-size: clamp(2.5rem, 6vw, 6rem);
+      color: white;
+      text-shadow: 2px 2px #000;
+    }
+
+    .top-contact {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      z-index: 3;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: white;
+    }
+
+    .top-contact a {
+      color: white;
+      margin-left: 5px;
+      text-decoration: none;
+    }
+
+    .top-contact a:hover {
+      color: var(--gold);
+    }
+
+    .section-text {
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .carousel-item video,
+    .carousel-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    #carouselImages,
+    #carouselVideos,
+    #carouselExtras {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    #carouselImages .carousel-item img,
+    #carouselExtras .carousel-item img {
+      max-height: 450px;
+      object-fit: cover;
+      width: 100%;
+      border-radius: 10px;
+      margin: 50px;
+    }
+
+    h2 {
+      color: var(--gold);
+    }
+
+    @media (max-width: 768px) {
+      .top-contact {
+        font-size: 1rem;
+        padding-right: 1rem;
+      }
+      .hero-content p {
+        font-size: 1.1rem;
+      }
+    }
