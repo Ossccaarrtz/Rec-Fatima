@@ -36,7 +36,7 @@
     <div class="floating-contact" data-aos="fade-left" data-aos-delay="1000">
       <div class="contact-content">
         <span class="contact-text">¡Contáctanos ahora!</span>
-        <a href="https://wa.link/cqn83t" target="_blank" class="whatsapp-btn">
+        <a href="https://wa.me/5212345678901" target="_blank" class="whatsapp-btn">
           <i class="fab fa-whatsapp"></i>
         </a>
       </div>
@@ -314,7 +314,7 @@
                 <div class="contact-details">
                   <h5>WhatsApp</h5>
                   <p>Respuesta inmediata</p>
-                  <a href="https://wa.link/cqn83t" target="_blank" class="contact-link">Enviar mensaje</a>
+                  <a href="https://wa.me/5212345678901" target="_blank" class="contact-link">Enviar mensaje</a>
                 </div>
               </div>
               
@@ -367,7 +367,7 @@
                 </select>
               </div>
               <div class="form-group">
-                <textarea class="form-control" rows="4" placeholder="Cuéntanos sobre tu evento..." required></textarea>
+                <textarea class="form-control" rows="4" placeholder="Cuéntanos sobre tu evento, cuantas personas, fechas aproximadas :)" required></textarea>
               </div>
               <button type="submit" class="btn btn-primary btn-modern w-100">Solicitar Cotización</button>
             </form>
@@ -388,7 +388,7 @@
             <div class="social-links">
               <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
               <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-              <a href="https://wa.link/cqn83t" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://wa.me/5212345678901" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
             </div>
           </div>
         </div>
@@ -433,7 +433,7 @@
 
   <!-- WhatsApp Float Button -->
   <div class="whatsapp-float" data-aos="zoom-in" data-aos-delay="2000">
-    <a href="https://wa.link/cqn83t" target="_blank" class="whatsapp-float-btn">
+    <a href="https://wa.me/5212345678901" target="_blank" class="whatsapp-float-btn">
       <i class="fab fa-whatsapp"></i>
     </a>
   </div>
@@ -442,64 +442,284 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
-    // Initialize AOS
-    AOS.init({
-      duration: 1000,
-      once: true,
-      offset: 100
-    });
+  // Initialize AOS
+  AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100
+  });
 
-    // Navbar scroll effect
-    window.addEventListener('scroll', function() {
-      const navbar = document.getElementById('mainNav');
-      if (window.scrollY > 100) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
+  // Navbar scroll effect
+  window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('mainNav');
+    if (window.scrollY > 100) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
 
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
-
-    // Form submission
-    document.querySelector('.contact-form').addEventListener('submit', function(e) {
+  // Smooth scrolling for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
       e.preventDefault();
-      // Add your form submission logic here
-      alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
-    });
-
-    // Parallax effect for hero section
-    window.addEventListener('scroll', function() {
-      const scrolled = window.pageYOffset;
-      const parallax = document.querySelector('.bg-video');
-      const speed = scrolled * 0.5;
-      if (parallax) {
-        parallax.style.transform = `translateY(${speed}px)`;
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
       }
     });
+  });
 
-    // Add interactive hover effects
-    document.querySelectorAll('.service-card').forEach(card => {
-      card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-15px) scale(1.02)';
-      });
-      
-      card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0) scale(1)';
-      });
+  // ===== CONFIGURACIÓN DE WHATSAPP =====
+  // 🔥 CAMBIA ESTE NÚMERO POR EL TUYO
+  const NUMERO_WHATSAPP = "528441841404"; // Formato: código país + número (sin espacios, sin +)
+  
+  // Ejemplos de formato correcto:
+  // México: "5212345678901" (52 + 10 dígitos)
+  // España: "34612345678" (34 + 9 dígitos)  
+  // Argentina: "5491123456789" (54 + 11 dígitos)
+  // Colombia: "573001234567" (57 + 10 dígitos)
+
+  // Form submission - Envío a WhatsApp
+  document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Validar que todos los campos estén llenos
+    const campos = this.querySelectorAll('input[required], select[required], textarea[required]');
+    let formularioValido = true;
+    
+    campos.forEach(campo => {
+      if (!campo.value.trim()) {
+        formularioValido = false;
+        campo.style.borderColor = '#ff4444';
+        campo.style.boxShadow = '0 0 0 0.2rem rgba(255, 68, 68, 0.25)';
+      } else {
+        campo.style.borderColor = '';
+        campo.style.boxShadow = '';
+      }
     });
-  </script>
+    
+    if (!formularioValido) {
+      mostrarNotificacion('Por favor, completa todos los campos requeridos', 'error');
+      return;
+    }
+    
+    // Obtener los datos del formulario
+    const nombre = this.querySelector('input[type="text"]').value.trim();
+    const email = this.querySelector('input[type="email"]').value.trim();
+    const telefono = this.querySelector('input[type="tel"]').value.trim();
+    const tipoEvento = this.querySelector('select').value;
+    const mensaje = this.querySelector('textarea').value.trim();
+    
+    // Obtener fecha y hora actual
+    const ahora = new Date();
+    const fecha = ahora.toLocaleDateString('es-MX', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+    const hora = ahora.toLocaleTimeString('es-MX', {
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+    
+    // Crear el mensaje para WhatsApp con formato elegante
+    const mensajeWhatsApp = `🎉 *NUEVA COTIZACIÓN - RECEPCIONES FÁTIMA*
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+👤 *DATOS DEL CLIENTE:*
+▫️ Nombre: ${nombre}
+▫️ Email: ${email}
+▫️ Teléfono: ${telefono}
+
+🎊 *DETALLES DEL EVENTO:*
+▫️ Tipo de evento: ${obtenerNombreEvento(tipoEvento)}
+
+💬 *MENSAJE ADICIONAL:*
+${mensaje}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📅 *Fecha de solicitud:* ${fecha}
+🕐 *Hora:* ${hora}
+🌐 *Enviado desde:* Página Web Oficial
+
+¡Hola! Me interesa conocer más sobre sus servicios para mi evento. ¿Podrían enviarme información detallada y cotización?`;
+
+    // Codificar el mensaje para URL
+    const mensajeCodificado = encodeURIComponent(mensajeWhatsApp);
+    
+    // Crear la URL de WhatsApp
+    const urlWhatsApp = `https://wa.me/${NUMERO_WHATSAPP}?text=${mensajeCodificado}`;
+    
+    // Mostrar notificación de éxito
+    mostrarNotificacion('¡Perfecto! Te estamos redirigiendo a WhatsApp...', 'success');
+    
+    // Esperar un momento y abrir WhatsApp
+    setTimeout(() => {
+      window.open(urlWhatsApp, '_blank');
+    }, 1500);
+    
+    // Limpiar el formulario después de enviar
+    setTimeout(() => {
+      this.reset();
+      mostrarNotificacion('Formulario limpiado. ¡Esperamos tu mensaje en WhatsApp!', 'info');
+    }, 2000);
+  });
+
+  // Función para obtener el nombre completo del tipo de evento
+  function obtenerNombreEvento(valor) {
+    const eventos = {
+      'boda': '💒 Boda',
+      'quinceanos': '👑 XV Años',
+      'bautizo': '👶 Bautizo',
+      'cumpleanos': '🎂 Cumpleaños',
+      'corporativo': '🏢 Evento Corporativo',
+      'otro': '🎉 Otro tipo de evento'
+    };
+    return eventos[valor] || valor;
+  }
+
+  // Función para mostrar notificaciones elegantes
+  function mostrarNotificacion(mensaje, tipo = 'info') {
+    // Remover notificación anterior si existe
+    const notificacionAnterior = document.querySelector('.notification-toast');
+    if (notificacionAnterior) {
+      notificacionAnterior.remove();
+    }
+    
+    // Crear nueva notificación
+    const notificacion = document.createElement('div');
+    notificacion.className = `notification-toast notification-${tipo}`;
+    
+    const iconos = {
+      'success': '✅',
+      'error': '❌',
+      'info': 'ℹ️',
+      'warning': '⚠️'
+    };
+    
+    notificacion.innerHTML = `
+      <div class="notification-content">
+        <span class="notification-icon">${iconos[tipo]}</span>
+        <span class="notification-message">${mensaje}</span>
+        <button class="notification-close" onclick="this.parentElement.parentElement.remove()">×</button>
+      </div>
+    `;
+    
+    // Agregar estilos
+    notificacion.style.cssText = `
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 10000;
+      background: ${tipo === 'success' ? 'linear-gradient(135deg, #10b981, #059669)' : 
+                   tipo === 'error' ? 'linear-gradient(135deg, #ef4444, #dc2626)' :
+                   tipo === 'warning' ? 'linear-gradient(135deg, #f59e0b, #d97706)' :
+                   'linear-gradient(135deg, #3b82f6, #2563eb)'};
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      transform: translateX(400px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      max-width: 400px;
+      backdrop-filter: blur(10px);
+    `;
+    
+    notificacion.querySelector('.notification-content').style.cssText = `
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    `;
+    
+    notificacion.querySelector('.notification-close').style.cssText = `
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: white;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      margin-left: auto;
+    `;
+    
+    document.body.appendChild(notificacion);
+    
+    // Animar entrada
+    setTimeout(() => {
+      notificacion.style.transform = 'translateX(0)';
+    }, 100);
+    
+    // Auto-remover después de 5 segundos
+    setTimeout(() => {
+      if (notificacion.parentElement) {
+        notificacion.style.transform = 'translateX(400px)';
+        setTimeout(() => notificacion.remove(), 300);
+      }
+    }, 5000);
+  }
+
+  // Validación en tiempo real de campos
+  document.querySelectorAll('.contact-form input, .contact-form select, .contact-form textarea').forEach(campo => {
+    campo.addEventListener('blur', function() {
+      if (this.hasAttribute('required') && !this.value.trim()) {
+        this.style.borderColor = '#ff4444';
+        this.style.boxShadow = '0 0 0 0.2rem rgba(255, 68, 68, 0.25)';
+      } else {
+        this.style.borderColor = '';
+        this.style.boxShadow = '';
+      }
+    });
+    
+    campo.addEventListener('input', function() {
+      if (this.style.borderColor === 'rgb(255, 68, 68)') {
+        this.style.borderColor = '';
+        this.style.boxShadow = '';
+      }
+    });
+  });
+
+  // Parallax effect for hero section
+  window.addEventListener('scroll', function() {
+    const scrolled = window.pageYOffset;
+    const parallax = document.querySelector('.bg-video');
+    const speed = scrolled * 0.5;
+    if (parallax) {
+      parallax.style.transform = `translateY(${speed}px)`;
+    }
+  });
+
+  // Add interactive hover effects
+  document.querySelectorAll('.service-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-15px) scale(1.02)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0) scale(1)';
+    });
+  });
+
+  // Actualizar todos los enlaces de WhatsApp en la página
+  document.addEventListener('DOMContentLoaded', function() {
+    const enlacesWhatsApp = document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]');
+    enlacesWhatsApp.forEach(enlace => {
+      const href = enlace.getAttribute('href');
+      if (href.includes('wa.me/') || href.includes('whatsapp')) {
+        // Actualizar con el número configurado
+        enlace.setAttribute('href', `https://wa.me/${NUMERO_WHATSAPP}`);
+      }
+    });
+  });
+</script>
 </body>
 </html>
