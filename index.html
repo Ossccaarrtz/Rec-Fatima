@@ -296,83 +296,89 @@
 
 <!-- Contact Section -->
 <section class="contact-section" id="contacto">
-<div class="container">
-  <div class="row align-items-center">
-    <div class="col-12 col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
-      <div class="contact-content">
-        <h2 class="section-title">¿Listo para tu evento perfecto?</h2>
-        <p class="section-subtitle">Contáctanos y hagamos realidad tus sueños</p>
-        
-        <div class="contact-info">
-          <div class="contact-item" data-aos="fade-up" data-aos-delay="200">
-            <div class="contact-icon-wrapper">
-              <i class="fab fa-whatsapp contact-icon"></i>
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+      <!-- Lado izquierdo: Título y métodos de contacto -->
+      <div class="col-12 col-lg-6 mb-5 mb-lg-0 d-flex flex-column align-items-center text-center" data-aos="fade-right">
+        <div class="contact-content w-100">
+          <h2 class="section-title">¿Listo para tu evento perfecto?</h2>
+          <p class="section-subtitle">Contáctanos y hagamos realidad tus sueños</p>
+
+          <div class="contact-info w-100 mt-4 d-flex flex-column align-items-center">
+            <!-- WhatsApp -->
+            <div class="contact-item w-100" data-aos="fade-up" data-aos-delay="200">
+              <div class="contact-icon-wrapper">
+                <i class="fab fa-whatsapp contact-icon"></i>
+              </div>
+              <div class="contact-details">
+                <h5>WhatsApp</h5>
+                <p>Respuesta inmediata</p>
+                <a href="https://wa.me/5212345678901" target="_blank" class="contact-link">Enviar mensaje</a>
+              </div>
             </div>
-            <div class="contact-details">
-              <h5>WhatsApp</h5>
-              <p>Respuesta inmediata</p>
-              <a href="https://wa.me/5212345678901" target="_blank" class="contact-link">Enviar mensaje</a>
+
+            <!-- Teléfono -->
+            <div class="contact-item w-100" data-aos="fade-up" data-aos-delay="400">
+              <div class="contact-icon-wrapper">
+                <i class="fas fa-phone contact-icon"></i>
+              </div>
+              <div class="contact-details">
+                <h5>Teléfono</h5>
+                <p>Atención personalizada</p>
+                <a href="tel:+1234567890" class="contact-link">Llamar ahora</a>
+              </div>
             </div>
-          </div>
-          
-          <div class="contact-item" data-aos="fade-up" data-aos-delay="400">
-            <div class="contact-icon-wrapper">
-              <i class="fas fa-phone contact-icon"></i>
-            </div>
-            <div class="contact-details">
-              <h5>Teléfono</h5>
-              <p>Atención personalizada</p>
-              <a href="tel:+1234567890" class="contact-link">Llamar ahora</a>
-            </div>
-          </div>
-          
-          <div class="contact-item" data-aos="fade-up" data-aos-delay="600">
-            <div class="contact-icon-wrapper">
-              <i class="fas fa-envelope contact-icon"></i>
-            </div>
-            <div class="contact-details">
-              <h5>Email</h5>
-              <p>Cotizaciones detalladas</p>
-              <a href="mailto:info@recepcionesfatima.com" class="contact-link">Enviar email</a>
+
+            <!-- Email -->
+            <div class="contact-item w-100" data-aos="fade-up" data-aos-delay="600">
+              <div class="contact-icon-wrapper">
+                <i class="fas fa-envelope contact-icon"></i>
+              </div>
+              <div class="contact-details">
+                <h5>Email</h5>
+                <p>Cotizaciones detalladas</p>
+                <a href="mailto:info@recepcionesfatima.com" class="contact-link">Enviar email</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    
-    <div class="col-12 col-lg-6" data-aos="fade-left">
-      <div class="contact-form-container">
-        <form class="contact-form">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Tu nombre" required>
-          </div>
-          <div class="form-group">
-            <input type="email" class="form-control" placeholder="Tu email" required>
-          </div>
-          <div class="form-group">
-            <input type="tel" class="form-control" placeholder="Tu teléfono" required>
-          </div>
-          <div class="form-group">
-            <select class="form-control" required>
-              <option value="">Tipo de evento</option>
-              <option value="boda">Boda</option>
-              <option value="quinceanos">XV Años</option>
-              <option value="bautizo">Bautizo</option>
-              <option value="cumpleanos">Cumpleaños</option>
-              <option value="corporativo">Evento Corporativo</option>
-              <option value="otro">Otro</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" rows="4" placeholder="Cuéntanos sobre tu evento, cuantas personas, fechas aproximadas :)" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-modern w-100">Solicitar Cotización</button>
-        </form>
+
+      <!-- Lado derecho: Formulario -->
+      <div class="col-12 col-lg-6" data-aos="fade-left">
+        <div class="contact-form-container">
+          <form class="contact-form">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Tu nombre" required>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Tu email" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" class="form-control" placeholder="Tu teléfono" required>
+            </div>
+            <div class="form-group">
+              <select class="form-control" required>
+                <option value="">Tipo de evento</option>
+                <option value="boda">Boda</option>
+                <option value="quinceanos">XV Años</option>
+                <option value="bautizo">Bautizo</option>
+                <option value="cumpleanos">Cumpleaños</option>
+                <option value="corporativo">Evento Corporativo</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" rows="4" placeholder="Cuéntanos sobre tu evento, cuántas personas, fechas aproximadas :)" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-modern w-100">Solicitar Cotización</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </section>
+
 
 
 <!-- Footer -->
