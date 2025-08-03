@@ -722,8 +722,12 @@ h6 {
   padding: 2rem 0;
 }
 
-.contact-info {
-  margin-top: 4rem;
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .contact-item {
@@ -734,14 +738,14 @@ h6 {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   border-radius: var(--radius-xl);
-  margin-bottom: 1.5rem;
   transition: var(--transition);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
 }
 
 .contact-item:hover {
   background: rgba(255, 255, 255, 0.15);
-  transform: translateX(15px);
+  transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
 }
 
@@ -1093,24 +1097,19 @@ h6 {
     font-size: clamp(2rem, 6vw, 3.5rem);
   }
 
+  .contact-methods {
+    max-width: 100%;
+  }
+
   .contact-item {
     flex-direction: column;
     text-align: center;
     padding: 1.5rem;
-    /* Añadido para mejorar el espaciado vertical entre los elementos de contacto */
-    margin-bottom: 1.5rem;
-  }
-
-  .contact-item:last-child {
-    margin-bottom: 0; /* Elimina el margen inferior del último elemento */
-  }
-
-  .contact-item .contact-icon-wrapper {
-    margin-bottom: 1rem; /* Espacio entre el icono y el texto cuando están apilados */
+    gap: 1rem;
   }
 
   .contact-item .contact-details {
-    text-align: center; /* Asegura que el texto dentro de los detalles esté centrado */
+    text-align: center;
   }
 
   .contact-form-container {
@@ -1251,22 +1250,3 @@ h6 {
     color: var(--gray-300);
   }
 }
-
-@media (max-width: 768px) {
-  .contact-content {
-    align-items: center;
-    text-align: center;
-  }
-
-  .contact-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-item {
-    width: 100%;
-    max-width: 400px;
-  }
-}
-
