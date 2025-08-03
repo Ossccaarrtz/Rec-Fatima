@@ -814,7 +814,7 @@ h6 {
   background: rgba(255, 255, 255, 0.15);
   border-color: var(--primary);
   box-shadow: 0 0 0 0.25rem rgba(99, 102, 241, 0.25);
-  color: var(--white);
+  color: var(--black);
   outline: none;
 }
 
@@ -1097,6 +1097,20 @@ h6 {
     flex-direction: column;
     text-align: center;
     padding: 1.5rem;
+    /* Añadido para mejorar el espaciado vertical entre los elementos de contacto */
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-item:last-child {
+    margin-bottom: 0; /* Elimina el margen inferior del último elemento */
+  }
+
+  .contact-item .contact-icon-wrapper {
+    margin-bottom: 1rem; /* Espacio entre el icono y el texto cuando están apilados */
+  }
+
+  .contact-item .contact-details {
+    text-align: center; /* Asegura que el texto dentro de los detalles esté centrado */
   }
 
   .contact-form-container {
