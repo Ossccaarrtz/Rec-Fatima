@@ -209,21 +209,21 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="video-container">
-              <video controls poster="/placeholder.svg?height=400&width=700&text=Video+1">
+              <video autoplay muted loop controls poster="/placeholder.svg?height=400&width=700&text=Video+1">
                 <source src="SaloContenido/video1.mp4" type="video/mp4">
               </video>
             </div>
           </div>
           <div class="carousel-item">
             <div class="video-container">
-              <video controls poster="/placeholder.svg?height=400&width=700&text=Video+2">
+              <video muted loop controls poster="/placeholder.svg?height=400&width=700&text=Video+2">
                 <source src="SaloContenido/video2.mp4" type="video/mp4">
               </video>
             </div>
           </div>
           <div class="carousel-item">
             <div class="video-container">
-              <video controls poster="/placeholder.svg?height=400&width=700&text=Video+3">
+              <video muted loop controls poster="/placeholder.svg?height=400&width=700&text=Video+3">
                 <source src="SaloContenido/video3.mp4" type="video/mp4">
               </video>
             </div>
@@ -239,6 +239,31 @@
     </div>
   </div>
 </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const carousel = document.getElementById("carouselVideos");
+  const videos = carousel.querySelectorAll("video");
+
+  // Función para pausar todos y reproducir el activo
+  function playActiveVideo() {
+    videos.forEach(video => {
+      video.pause();
+    });
+    const activeVideo = carousel.querySelector(".carousel-item.active video");
+    if (activeVideo) {
+      activeVideo.play();
+    }
+  }
+
+  // Evento cuando el slide termina de cambiar
+  carousel.addEventListener("slid.bs.carousel", playActiveVideo);
+
+  // Reproducir solo el primero al cargar
+  playActiveVideo();
+});
+</script>
+
 
 <!-- Services Section -->
 <section class="services-section" id="servicios">
