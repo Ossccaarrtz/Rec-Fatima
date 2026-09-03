@@ -4,562 +4,623 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Recepciones Fátima - Eventos Únicos e Inolvidables</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Recepciones Fátima — momentos que despiertan emociones. Bodas, XV años, bautizos y eventos corporativos en Saltillo, Coahuila." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="SaloContenido/Logo.png">
-
-<!-- Bootstrap Icons CDN -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-  <div class="container">
-    <a class="navbar-brand" href="#" data-aos="fade-right">
-      <span class="brand-text">Recepciones Fátima</span>
+<nav class="nav-redesign" id="mainNav">
+  <div class="nav-inner">
+    <a href="#inicio" class="nav-logo">
+      <span class="nav-logo-name">Recepciones <em>Fátima</em></span>
+      <span class="nav-logo-tag">SALTILLO, COAHUILA</span>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navRight">
+      <span></span><span></span><span></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
-        <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-      </ul>
+    <div class="nav-right" id="navRight">
+      <a class="nav-link" href="#nosotros">Nosotros</a>
+      <a class="nav-link" href="#galeria">Galería</a>
+      <a class="nav-link" href="#servicios">Servicios</a>
+      <a class="nav-link" href="#contacto">Contacto</a>
+      <a class="nav-cta" href="#contacto">Cotizar</a>
     </div>
   </div>
 </nav>
 
 <!-- Hero Section -->
-<header class="video-hero" id="inicio">
-  <div class="floating-contact" data-aos="fade-left" data-aos-delay="1000">
-    <div class="contact-content">
-      
-    </div>
-  </div>
-
-  <video autoplay muted loop playsinline class="bg-video">
+<header class="hero" id="inicio">
+  <video autoplay muted loop playsinline preload="auto" class="hero-video" id="heroVideo">
     <source src="SaloContenido/hero.mp4.mp4" type="video/mp4" />
     Tu navegador no soporta video en HTML5.
   </video>
-  
-  <div class="hero-overlay"></div>
-  <div class="hero-particles"></div>
-  
-  <div class="hero-content">
-    <div class="hero-text" data-aos="fade-up" data-aos-duration="1500">
-      <h1 class="hero-title">
-        <span class="title-line">Recepciones</span>
-        <span class="title-line accent-text">Fátima</span>
-      </h1>
-      <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="500">
-        Transformamos tus sueños en momentos inolvidables
-      </p>
-      <div class="hero-buttons" data-aos="fade-up" data-aos-delay="800">
-        <a href="#galeria" class="btn btn-primary btn-modern">Ver Galería</a>
-        <a href="#contacto" class="btn btn-outline-light btn-modern">Contactar</a>
-      </div>
+  <div class="hero-scrim"></div>
+
+  <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+    <h1 class="hero-title">
+      <span class="title-line">Recepciones</span>
+      <span class="title-line accent-text">Fátima</span>
+    </h1>
+    <p class="hero-subtitle">Transformamos tus sueños en momentos inolvidables.</p>
+    <div class="hero-actions">
+      <a href="#galeria" class="btn-gold">Ver galería</a>
+      <a href="#contacto" class="btn-outline">Contactar <i class="bi bi-arrow-up-right"></i></a>
     </div>
-    <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1200">
-      <div class="scroll-arrow"></div>
-    </div>
+  </div>
+
+  <div class="hero-scroll-hint">
+    <span>DESLIZA</span>
+    <i class="bi bi-chevron-down"></i>
+  </div>
+
+  <div class="hero-controls">
+    <button class="hero-ctrl" id="heroPause" aria-label="Pausar video" aria-pressed="false">
+      <i class="bi bi-pause-fill"></i>
+    </button>
+    <button class="hero-ctrl" id="heroMute" aria-label="Silenciar video" aria-pressed="true">
+      <i class="bi bi-volume-mute-fill"></i>
+    </button>
+  </div>
+
+  <div class="hero-progress">
+    <div class="hero-progress-fill" id="heroProgress"></div>
   </div>
 </header>
 
-<!-- About Section -->
-<section class="about-section" data-aos="fade-up">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6" data-aos="fade-right">
-        <div class="about-content">
-          <h2 class="section-title">Atención Personalizada</h2>
-          <p class="section-subtitle">Garantía de calidad y servicio excepcional</p>
-          <div class="features-grid">
-            <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
-              <div class="feature-icon-wrapper">
-                <i class="fas fa-star feature-icon"></i>
-              </div>
-              <div class="feature-content">
-                <h4>Calidad Premium</h4>
-                <p>Los mejores estándares en cada detalle</p>
-              </div>
-            </div>
-            <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
-              <div class="feature-icon-wrapper">
-                <i class="fas fa-heart feature-icon"></i>
-              </div>
-              <div class="feature-content">
-                <h4>Atención Personalizada</h4>
-                <p>Cada evento es único y especial</p>
-              </div>
-            </div>
-            <div class="feature-item" data-aos="fade-up" data-aos-delay="600">
-              <div class="feature-icon-wrapper">
-                <i class="fas fa-clock feature-icon"></i>
-              </div>
-              <div class="feature-content">
-                <h4>Experiencia</h4>
-                <p>Años creando momentos perfectos</p>
-              </div>
-            </div>
-          </div>
-        </div>
+<!-- Valores / Nosotros -->
+<section class="valores" id="nosotros">
+  <div class="valores-inner">
+    <div class="valores-head">
+      <div class="valores-head-copy" data-aos="fade-up">
+        <p class="eyebrow">NUESTRA PROMESA</p>
+        <h2 class="title-serif">Atención personalizada en cada detalle</h2>
       </div>
-      <div class="col-lg-6" data-aos="fade-left">
-        <div class="about-image">
-          <img src="SaloContenido/promos.jpg" alt="Salón elegante" class="img-fluid rounded-4 shadow-lg">
-        </div>
+      <p class="valores-head-text" data-aos="fade-up" data-aos-delay="150">
+        Garantía de calidad y servicio excepcional. Cada evento se planea con calma, con el
+        cuidado que merece una fecha que no se repite.
+      </p>
+    </div>
+    <div class="valores-row">
+      <div class="valor" data-aos="fade-up" data-aos-delay="100">
+        <i class="bi bi-stars valor-icon"></i>
+        <h3>Calidad Premium</h3>
+        <p>Los mejores estándares en cada detalle, del montaje al último brindis.</p>
+      </div>
+      <div class="valor" data-aos="fade-up" data-aos-delay="200">
+        <i class="bi bi-heart valor-icon"></i>
+        <h3>Atención Personalizada</h3>
+        <p>Cada evento es único: acompañamos la planeación de principio a fin.</p>
+      </div>
+      <div class="valor" data-aos="fade-up" data-aos-delay="300">
+        <i class="bi bi-hourglass-split valor-icon"></i>
+        <h3>Experiencia</h3>
+        <p>Años creando momentos perfectos para bodas, XV años y celebraciones.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Gallery Section -->
-<section class="gallery-section" id="galeria">
-  <div class="container">
-    <div class="section-header text-center" data-aos="fade-up">
-      <h2 class="section-title">Momentos Capturados</h2>
-      <p class="section-subtitle">Cada imagen cuenta una historia única</p>
-    </div>
-    
-    <div class="gallery-carousel" data-aos="fade-up" data-aos-delay="300">
-      <div id="carouselImages" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselImages" data-bs-slide-to="0" class="active"></button>
-          <button type="button" data-bs-target="#carouselImages" data-bs-slide-to="1"></button>
-          <button type="button" data-bs-target="#carouselImages" data-bs-slide-to="2"></button>
-          <button type="button" data-bs-target="#carouselImages" data-bs-slide-to="3"></button>
-          <button type="button" data-bs-target="#carouselImages" data-bs-slide-to="4"></button>
-          <button type="button" data-bs-target="#carouselImages" data-bs-slide-to="5"></button>
-          <button type="button" data-bs-target="#carouselImages" data-bs-slide-to="6"></button>
-          <button type="button" data-bs-target="#carouselImages" data-bs-slide-to="7"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="SaloContenido/img1.jpg" alt="Evento elegante" class="d-block w-100">
-            <div class="carousel-caption">
-              <h5>Elegancia y Sofisticación</h5>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="SaloContenido/img2.jpg" alt="Decoración dorada" class="d-block w-100">
-            <div class="carousel-caption">
-              <h5>Detalles que Marcan la Diferencia</h5>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="SaloContenido/img3.jpg" alt="Mesa elegante" class="d-block w-100">
-            <div class="carousel-caption">
-              <h5>Ambientes Únicos</h5>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="SaloContenido/img4.jpg" alt="Celebración" class="d-block w-100">
-            <div class="carousel-caption">
-              <h5>Momentos Inolvidables</h5>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="SaloContenido/tela.jpg" alt="Decoración floral" class="d-block w-100">
-            <div class="carousel-caption">
-              <h5>Belleza en Cada Detalle</h5>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="SaloContenido/img6.jpg" alt="Iluminación especial" class="d-block w-100">
-            <div class="carousel-caption">
-              <h5>Ambientación Perfecta</h5>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="SaloContenido/img7.jpg" alt="Evento nocturno" class="d-block w-100">
-            <div class="carousel-caption">
-              <h5>Magia Nocturna</h5>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="SaloContenido/img8.jpg" alt="Celebración especial" class="d-block w-100">
-            <div class="carousel-caption">
-              <h5>Celebraciones Especiales</h5>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselImages" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselImages" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
+<section class="galeria" id="galeria">
+  <div class="galeria-inner">
+    <div class="galeria-head">
+      <div data-aos="fade-up">
+        <p class="eyebrow">GALERÍA</p>
+        <h2 class="title-serif">Momentos capturados</h2>
       </div>
+      <div class="galeria-nav" data-aos="fade-up">
+        <span class="galeria-counter"><span id="galCurrent">01</span> / <span id="galTotal">12</span></span>
+        <button class="galeria-arrow" id="galPrev" aria-label="Anterior"><i class="bi bi-arrow-left"></i></button>
+        <button class="galeria-arrow active" id="galNext" aria-label="Siguiente"><i class="bi bi-arrow-right"></i></button>
+      </div>
+    </div>
+
+    <div class="galeria-track" id="galeriaTrack" data-aos="fade-up" data-aos-delay="150">
+      <div class="slide" data-type="video">
+        <div class="slide-media">
+          <video autoplay muted loop playsinline preload="auto"><source src="SaloContenido/video1.mp4" type="video/mp4"></video>
+        </div>
+        <span class="slide-duration"></span>
+        <div class="slide-scrim"></div>
+        <button class="slide-sound" aria-label="Activar sonido" aria-pressed="false"><i class="bi bi-volume-mute-fill"></i></button>
+        <div class="slide-info">
+          <span class="slide-kind">VIDEO</span>
+          <p class="slide-caption">Recorrido por el salón</p>
+        </div>
+      </div>
+
+      <div class="slide" data-type="photo">
+        <div class="slide-media"><img src="SaloContenido/img1.jpg" alt="Evento elegante" loading="lazy"></div>
+        <div class="slide-scrim"></div>
+        <div class="slide-info">
+          <span class="slide-kind">FOTO</span>
+          <p class="slide-caption">Elegancia y sofisticación</p>
+        </div>
+      </div>
+
+      <div class="slide" data-type="photo">
+        <div class="slide-media"><img src="SaloContenido/img2.jpg" alt="Decoración dorada" loading="lazy"></div>
+        <div class="slide-scrim"></div>
+        <div class="slide-info">
+          <span class="slide-kind">FOTO</span>
+          <p class="slide-caption">Detalles en dorado</p>
+        </div>
+      </div>
+
+      <div class="slide" data-type="video">
+        <div class="slide-media">
+          <video autoplay muted loop playsinline preload="auto"><source src="SaloContenido/video2.mp4" type="video/mp4"></video>
+        </div>
+        <span class="slide-duration"></span>
+        <div class="slide-scrim"></div>
+        <button class="slide-sound" aria-label="Activar sonido" aria-pressed="false"><i class="bi bi-volume-mute-fill"></i></button>
+        <div class="slide-info">
+          <span class="slide-kind">VIDEO</span>
+          <p class="slide-caption">Un brindis inolvidable</p>
+        </div>
+      </div>
+
+      <div class="slide" data-type="photo">
+        <div class="slide-media"><img src="SaloContenido/img3.jpg" alt="Mesa elegante" loading="lazy"></div>
+        <div class="slide-scrim"></div>
+        <div class="slide-info">
+          <span class="slide-kind">FOTO</span>
+          <p class="slide-caption">Mesas con encanto</p>
+        </div>
+      </div>
+
+      <div class="slide" data-type="photo">
+        <div class="slide-media"><img src="SaloContenido/img4.jpg" alt="Celebración" loading="lazy"></div>
+        <div class="slide-scrim"></div>
+        <div class="slide-info">
+          <span class="slide-kind">FOTO</span>
+          <p class="slide-caption">Momentos en familia</p>
+        </div>
+      </div>
+
+      <div class="slide" data-type="photo">
+        <div class="slide-media"><img src="SaloContenido/tela.jpg" alt="Decoración floral" loading="lazy"></div>
+        <div class="slide-scrim"></div>
+        <div class="slide-info">
+          <span class="slide-kind">FOTO</span>
+          <p class="slide-caption">Belleza en cada detalle</p>
+        </div>
+      </div>
+
+      <div class="slide" data-type="video">
+        <div class="slide-media">
+          <video autoplay muted loop playsinline preload="auto"><source src="SaloContenido/video3.mp4" type="video/mp4"></video>
+        </div>
+        <span class="slide-duration"></span>
+        <div class="slide-scrim"></div>
+        <button class="slide-sound" aria-label="Activar sonido" aria-pressed="false"><i class="bi bi-volume-mute-fill"></i></button>
+        <div class="slide-info">
+          <span class="slide-kind">VIDEO</span>
+          <p class="slide-caption">La pista de baile</p>
+        </div>
+      </div>
+
+      <div class="slide" data-type="photo">
+        <div class="slide-media"><img src="SaloContenido/img5.jpg" alt="Iluminación especial" loading="lazy"></div>
+        <div class="slide-scrim"></div>
+        <div class="slide-info">
+          <span class="slide-kind">FOTO</span>
+          <p class="slide-caption">Ambientación perfecta</p>
+        </div>
+      </div>
+
+      <div class="slide" data-type="photo">
+        <div class="slide-media"><img src="SaloContenido/img6.jpg" alt="Iluminación especial" loading="lazy"></div>
+        <div class="slide-scrim"></div>
+        <div class="slide-info">
+          <span class="slide-kind">FOTO</span>
+          <p class="slide-caption">Iluminación especial</p>
+        </div>
+      </div>
+
+      <div class="slide" data-type="photo">
+        <div class="slide-media"><img src="SaloContenido/img7.jpg" alt="Evento nocturno" loading="lazy"></div>
+        <div class="slide-scrim"></div>
+        <div class="slide-info">
+          <span class="slide-kind">FOTO</span>
+          <p class="slide-caption">Magia nocturna</p>
+        </div>
+      </div>
+
+      <div class="slide" data-type="photo">
+        <div class="slide-media"><img src="SaloContenido/img8.jpg" alt="Celebración especial" loading="lazy"></div>
+        <div class="slide-scrim"></div>
+        <div class="slide-info">
+          <span class="slide-kind">FOTO</span>
+          <p class="slide-caption">Celebraciones especiales</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="galeria-footer">
+      <div class="galeria-dots" id="galeriaDots"></div>
+      <a href="#galeria" class="galeria-link">Ver toda la galería <i class="bi bi-arrow-right"></i></a>
     </div>
   </div>
 </section>
-
-<!-- Video Section -->
-<section class="video-section">
-  <div class="container">
-    <div class="section-header text-center" data-aos="fade-up">
-      <h2 class="section-title">Instantes Inolvidables</h2>
-      <p class="section-subtitle">Revive la magia de cada momento</p>
-    </div>
-    
-    <div class="video-carousel" data-aos="fade-up" data-aos-delay="300">
-      <div id="carouselVideos" class="carousel slide" data-bs-interval="false">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="video-container">
-              <video autoplay muted loop controls poster="/placeholder.svg?height=400&width=700&text=Video+1">
-                <source src="SaloContenido/video1.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="video-container">
-              <video muted loop controls poster="/placeholder.svg?height=400&width=700&text=Video+2">
-                <source src="SaloContenido/video2.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="video-container">
-              <video muted loop controls poster="/placeholder.svg?height=400&width=700&text=Video+3">
-                <source src="SaloContenido/video3.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselVideos" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselVideos" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const carousel = document.getElementById("carouselVideos");
-  const videos = carousel.querySelectorAll("video");
-
-  // Función para pausar todos y reproducir el activo
-  function playActiveVideo() {
-    videos.forEach(video => {
-      video.pause();
-    });
-    const activeVideo = carousel.querySelector(".carousel-item.active video");
-    if (activeVideo) {
-      activeVideo.play();
-    }
-  }
-
-  // Evento cuando el slide termina de cambiar
-  carousel.addEventListener("slid.bs.carousel", playActiveVideo);
-
-  // Reproducir solo el primero al cargar
-  playActiveVideo();
-});
-</script>
-
 
 <!-- Services Section -->
-<section class="services-section" id="servicios">
-  <div class="container">
-    <div class="section-header text-center" data-aos="fade-up">
-      <h2 class="section-title">Servicios Exclusivos</h2>
-      <p class="section-subtitle">Experiencias únicas para eventos perfectos</p>
+<section class="servicios" id="servicios">
+  <div class="servicios-inner">
+    <div class="servicios-head" data-aos="fade-up">
+      <p class="eyebrow">SERVICIOS</p>
+      <h2 class="title-serif">Experiencias únicas para eventos perfectos</h2>
     </div>
-    
-    <div class="services-grid">
-      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-        <div class="service-image">
-          <img src="SaloContenido/espejo.jpg" alt="Espejo mágico" class="img-fluid">
-          <div class="service-overlay">
-            <i class="fas fa-magic service-icon"></i>
-          </div>
-        </div>
-        <div class="service-content">
-          <h4>Espejo Mágico</h4>
-          <p>Hermoso espejo con personalización al gusto.</p>
-          <div class="service-badge">Premium</div>
-        </div>
-      </div>
-      
-      <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-        <div class="service-image">
-          <img src="SaloContenido/3601.jpg" alt="Fotografía 360" class="img-fluid">
-          <div class="service-overlay">
-            <i class="fas fa-camera service-icon"></i>
-          </div>
-        </div>
-        <div class="service-content">
-          <h4>Fotografía 360°</h4>
-          <p>Captura momentos únicos desde todos los ángulos con nuestra tecnología de fotografía 360°.</p>
-          <div class="service-badge">Innovador</div>
-        </div>
-      </div>
-      
-      <div class="service-card" data-aos="fade-up" data-aos-delay="600">
-        <div class="service-image">
-          <img src="SaloContenido/pantalla.jpg" alt="Catering premium" class="img-fluid">
-          <div class="service-overlay">
-            <i class="fas fa-utensils service-icon"></i>
-          </div>
-        </div>
-        <div class="service-content">
-          <h4>Pantalla</h4>
-          <p>Pantalla con video toda la noche, junto con una reseña especial.</p>
-          <div class="service-badge">Especial</div>
-        </div>
-      </div>
+
+    <div class="servicios-list" data-aos="fade-up" data-aos-delay="100">
+      <a href="#contacto" class="servicio-card">
+        <span class="servicio-thumb"><img src="SaloContenido/espejo.jpg" alt="Espejo mágico" loading="lazy"></span>
+        <span class="servicio-body">
+          <span class="servicio-top">
+            <span class="servicio-num">01</span>
+            <span class="servicio-badge">Premium</span>
+          </span>
+          <span class="servicio-title">Espejo Mágico</span>
+          <span class="servicio-desc">Hermoso espejo con personalización al gusto de cada celebración.</span>
+          <span class="servicio-link">Cotizar <i class="bi bi-arrow-up-right servicio-arrow"></i></span>
+        </span>
+      </a>
+      <a href="#contacto" class="servicio-card">
+        <span class="servicio-thumb"><img src="SaloContenido/3601.jpg" alt="Fotografía 360°" loading="lazy"></span>
+        <span class="servicio-body">
+          <span class="servicio-top">
+            <span class="servicio-num">02</span>
+            <span class="servicio-badge">Innovador</span>
+          </span>
+          <span class="servicio-title">Fotografía 360°</span>
+          <span class="servicio-desc">Captura momentos únicos desde todos los ángulos con nuestra tecnología 360°.</span>
+          <span class="servicio-link">Cotizar <i class="bi bi-arrow-up-right servicio-arrow"></i></span>
+        </span>
+      </a>
+      <a href="#contacto" class="servicio-card">
+        <span class="servicio-thumb"><img src="SaloContenido/pantalla.jpg" alt="Pantalla" loading="lazy"></span>
+        <span class="servicio-body">
+          <span class="servicio-top">
+            <span class="servicio-num">03</span>
+            <span class="servicio-badge">Especial</span>
+          </span>
+          <span class="servicio-title">Pantalla</span>
+          <span class="servicio-desc">Pantalla con video toda la noche, junto con una reseña especial.</span>
+          <span class="servicio-link">Cotizar <i class="bi bi-arrow-up-right servicio-arrow"></i></span>
+        </span>
+      </a>
     </div>
   </div>
 </section>
 
 <!-- Contact Section -->
-<section class="contact-section" id="contacto">
-  <div class="container">
-    <!-- Título principal centrado -->
-    <div class="section-header text-center" data-aos="fade-up">
-      <h2 class="section-title">¿Listo para tu evento perfecto?</h2>
-      <p class="section-subtitle">Contáctanos y hagamos realidad tus sueños</p>
+<section class="contacto" id="contacto">
+  <div class="contacto-grid">
+    <div class="contacto-left" data-aos="fade-right">
+      <p class="eyebrow">CONTACTO</p>
+      <h2 class="title-serif">¿Listo para tu evento perfecto?</h2>
+      <p class="contacto-text">Cuéntanos qué imaginas y lo hacemos realidad. Respondemos el mismo día.</p>
+
+      <div class="contacto-channels">
+        <a href="https://wa.me/528441841404" target="_blank" rel="noopener" class="contacto-channel">
+          <i class="bi bi-whatsapp"></i>
+          <span><strong>WhatsApp</strong><small>Respuesta inmediata</small></span>
+        </a>
+        <a href="tel:+528441841404" class="contacto-channel">
+          <i class="bi bi-telephone"></i>
+          <span><strong>Teléfono</strong><small>Atención personalizada</small></span>
+        </a>
+        <a href="mailto:recepcionesfaty@gmail.com" class="contacto-channel">
+          <i class="bi bi-envelope"></i>
+          <span><strong>Email</strong><small>recepcionesfaty@gmail.com</small></span>
+        </a>
+      </div>
     </div>
-    
-    <div class="row align-items-start justify-content-center">
-      <!-- Lado izquierdo: Métodos de contacto -->
-      <div class="col-12 col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
-        <div class="contact-methods">
-          <!-- WhatsApp -->
-          <div class="contact-item" data-aos="fade-up" data-aos-delay="200">
-            <div class="contact-icon-wrapper">
-              <i class="fab fa-whatsapp contact-icon"></i>
-            </div>
-            <div class="contact-details">
-              <h5>WhatsApp</h5>
-              <p>Respuesta inmediata</p>
-              <a href="https://wa.me/5212345678901" target="_blank" class="contact-link">Enviar mensaje</a>
-            </div>
-          </div>
 
-          <!-- Teléfono -->
-          <div class="contact-item" data-aos="fade-up" data-aos-delay="400">
-            <div class="contact-icon-wrapper">
-              <i class="fas fa-phone contact-icon"></i>
-            </div>
-            <div class="contact-details">
-              <h5>Teléfono</h5>
-              <p>Atención personalizada</p>
-              <a href="tel:+528441841404" class="contact-link">Llamar ahora</a>
-            </div>
-          </div>
-
-          <!-- Email -->
-          <div class="contact-item" data-aos="fade-up" data-aos-delay="600">
-            <div class="contact-icon-wrapper">
-              <i class="fas fa-envelope contact-icon"></i>
-            </div>
-            <div class="contact-details">
-              <h5>Email</h5>
-              <p>Cotizaciones detalladas</p>
-              <a href="mailto:recepcionesfaty@gmail.com" class="contact-link">Enviar email</a>
-            </div>
-          </div>
+    <div class="contacto-right" data-aos="fade-left">
+      <h3 class="contacto-form-title">Solicita tu cotización</h3>
+      <form class="contact-form">
+        <div class="field">
+          <input type="text" placeholder="Tu nombre" required>
         </div>
-      </div>
-
-      <!-- Lado derecho: Formulario -->
-      <div class="col-12 col-lg-6" data-aos="fade-left">
-        <div class="contact-form-container">
-          <form class="contact-form">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Tu nombre" required>
-            </div>
-            <div class="form-group">
-              <input type="email" class="form-control" placeholder="Tu email" required>
-            </div>
-            <div class="form-group">
-              <input type="tel" class="form-control" placeholder="Tu teléfono" required>
-            </div>
-            <div class="form-group">
-              <select class="form-control" required>
-                <option value="">Tipo de evento</option>
-                <option value="boda">Boda</option>
-                <option value="quinceanos">XV Años</option>
-                <option value="bautizo">Bautizo</option>
-                <option value="cumpleanos">Cumpleaños</option>
-                <option value="corporativo">Evento Corporativo</option>
-                <option value="otro">Otro</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" rows="4" placeholder="Cuéntanos sobre tu evento, cuántas personas, fechas aproximadas :)" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-modern w-100">Solicitar Cotización</button>
-          </form>
+        <div class="field">
+          <input type="email" placeholder="Tu email" required>
         </div>
-      </div>
+        <div class="field">
+          <input type="tel" placeholder="Tu teléfono" required>
+        </div>
+        <div class="field">
+          <select required>
+            <option value="">Tipo de evento</option>
+            <option value="boda">Boda</option>
+            <option value="quinceanos">XV Años</option>
+            <option value="bautizo">Bautizo</option>
+            <option value="cumpleanos">Cumpleaños</option>
+            <option value="corporativo">Evento Corporativo</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        <div class="field">
+          <textarea rows="3" placeholder="Cuéntanos sobre tu evento, cuántas personas, fechas aproximadas :)" required></textarea>
+        </div>
+        <button type="submit" class="btn-gold w-full">Enviar solicitud</button>
+      </form>
     </div>
   </div>
 </section>
 
-
 <!-- Footer -->
-<footer class="footer-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4" data-aos="fade-up">
-        <div class="footer-content">
-          <h4 class="footer-title">Recepciones Fátima</h4>
-          <p>Creando momentos inolvidables desde hace años. Tu evento perfecto es nuestra pasión.</p>
-          <div class="social-links">
-            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/5212345678901" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="footer-content">
-          <h5 class="footer-subtitle">Servicios</h5>
-          <ul class="footer-links">
-            <li><a href="#">Bodas</a></li>
-            <li><a href="#">XV Años</a></li>
-            <li><a href="#">Bautizos</a></li>
-            <li><a href="#">Eventos Corporativos</a></li>
-            <li><a href="#">Cumpleaños</a></li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
-        <div class="footer-content">
-          <h5 class="footer-subtitle">Contacto</h5>
-          <div class="footer-contact">
-            <p><i class="fas fa-phone"></i> +52 1 844 184 1404</p>
-            <p><i class="fas fa-envelope"></i> recepcionesfaty@gmail.com</p>
-            <p><i class="fas fa-map-marker-alt"></i> Saltillo, Coahuila, México</p>
-          </div>
-        </div>
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h4>Recepciones <em>Fátima</em></h4>
+      <p>Creando momentos inolvidables desde hace años. Tu evento perfecto es nuestra pasión.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://wa.me/528441841404" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
       </div>
     </div>
-    
-    <div class="footer-bottom">
-      <div class="row align-items-center">
-        <div class="col-md-6">
-          <p>&copy; 2024 Recepciones Fátima. Todos los derechos reservados.</p>
-        </div>
-        <div class="col-md-6 text-md-end">
-          <p>Diseñado con <i class="fas fa-heart text-accent"></i> para eventos perfectos</p>
-        </div>
-      </div>
+
+    <div class="footer-col">
+      <h5>Servicios</h5>
+      <ul class="footer-links">
+        <li><a href="#servicios">Bodas</a></li>
+        <li><a href="#servicios">XV Años</a></li>
+        <li><a href="#servicios">Bautizos</a></li>
+        <li><a href="#servicios">Eventos Corporativos</a></li>
+        <li><a href="#servicios">Cumpleaños</a></li>
+      </ul>
     </div>
+
+    <div class="footer-col">
+      <h5>Contacto</h5>
+      <p><i class="bi bi-telephone"></i> +52 1 844 184 1404</p>
+      <p><i class="bi bi-envelope"></i> recepcionesfaty@gmail.com</p>
+      <p><i class="bi bi-geo-alt"></i> Saltillo, Coahuila, México</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Recepciones Fátima. Todos los derechos reservados.</p>
+    <p>Diseñado con <i class="bi bi-heart-fill"></i> para eventos perfectos</p>
   </div>
 </footer>
 
 <!-- WhatsApp Float Button -->
-<div class="whatsapp-float" data-aos="zoom-in" data-aos-delay="2000">
-  <a href="https://wa.me/5212345678901" target="_blank" class="whatsapp-float-btn">
+<div class="whatsapp-float">
+  <a href="https://wa.me/528441841404" target="_blank" rel="noopener" class="whatsapp-float-btn" aria-label="Escribir por WhatsApp">
     <i class="bi bi-whatsapp"></i>
   </a>
 </div>
 
 <!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
-// Initialize AOS
 AOS.init({
-  duration: 1000,
+  duration: 900,
   once: true,
-  offset: 100
+  offset: 80
 });
 
-// Navbar scroll effect
-window.addEventListener('scroll', function() {
-  const navbar = document.getElementById('mainNav');
-  if (window.scrollY > 100) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ===== NAV ===== */
+const mainNav = document.getElementById('mainNav');
+const navToggle = document.getElementById('navToggle');
+
+window.addEventListener('scroll', function () {
+  mainNav.classList.toggle('scrolled', window.scrollY > 80);
 });
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+navToggle.addEventListener('click', function () {
+  const open = mainNav.classList.toggle('nav-open');
+  navToggle.setAttribute('aria-expanded', open);
+});
+
+document.querySelectorAll('#navRight a').forEach(function (link) {
+  link.addEventListener('click', function () {
+    mainNav.classList.remove('nav-open');
+    navToggle.setAttribute('aria-expanded', false);
+  });
+});
+
+/* Smooth scrolling for in-page anchors */
+document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
   anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
+    const targetId = this.getAttribute('href');
+    const target = document.querySelector(targetId);
     if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+      e.preventDefault();
+      target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
     }
   });
 });
 
-// ===== CONFIGURACIÓN DE WHATSAPP =====
-// 🔥 CAMBIA ESTE NÚMERO POR EL TUYO
+/* ===== HERO VIDEO ===== */
+const heroVideo = document.getElementById('heroVideo');
+const heroPause = document.getElementById('heroPause');
+const heroMute = document.getElementById('heroMute');
+const heroProgress = document.getElementById('heroProgress');
+
+if (prefersReducedMotion) {
+  heroVideo.pause();
+  heroPause.innerHTML = '<i class="bi bi-play-fill"></i>';
+  heroPause.setAttribute('aria-pressed', 'true');
+}
+
+heroPause.addEventListener('click', function () {
+  if (heroVideo.paused) {
+    heroVideo.play();
+    heroPause.innerHTML = '<i class="bi bi-pause-fill"></i>';
+    heroPause.setAttribute('aria-pressed', 'false');
+  } else {
+    heroVideo.pause();
+    heroPause.innerHTML = '<i class="bi bi-play-fill"></i>';
+    heroPause.setAttribute('aria-pressed', 'true');
+  }
+});
+
+heroMute.addEventListener('click', function () {
+  heroVideo.muted = !heroVideo.muted;
+  heroMute.innerHTML = heroVideo.muted ? '<i class="bi bi-volume-mute-fill"></i>' : '<i class="bi bi-volume-up-fill"></i>';
+  heroMute.setAttribute('aria-pressed', heroVideo.muted);
+});
+
+heroVideo.addEventListener('timeupdate', function () {
+  if (heroVideo.duration) {
+    heroProgress.style.width = (heroVideo.currentTime / heroVideo.duration * 100) + '%';
+  }
+});
+
+/* ===== GALERÍA CAROUSEL ===== */
+(function initGaleria() {
+  const track = document.getElementById('galeriaTrack');
+  const slides = Array.from(track.querySelectorAll('.slide'));
+  const total = slides.length;
+  const currentEl = document.getElementById('galCurrent');
+  const dotsWrap = document.getElementById('galeriaDots');
+
+  document.getElementById('galTotal').textContent = String(total).padStart(2, '0');
+
+  slides.forEach(function (_, i) {
+    const dot = document.createElement('button');
+    dot.className = 'galeria-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Ir a la diapositiva ' + (i + 1));
+    dot.addEventListener('click', function () { scrollToSlide(i); });
+    dotsWrap.appendChild(dot);
+  });
+  const dots = Array.from(dotsWrap.children);
+
+  function slideStep() {
+    const style = getComputedStyle(track);
+    const gap = parseFloat(style.columnGap || style.gap || '0') || 0;
+    return slides[0].getBoundingClientRect().width + gap;
+  }
+
+  function scrollToSlide(i) {
+    track.scrollTo({ left: i * slideStep(), behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+  }
+
+  document.getElementById('galPrev').addEventListener('click', function () {
+    track.scrollBy({ left: -slideStep(), behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+  });
+  document.getElementById('galNext').addEventListener('click', function () {
+    track.scrollBy({ left: slideStep(), behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+  });
+
+  let ticking = false;
+  track.addEventListener('scroll', function () {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () {
+      const step = slideStep();
+      const idx = Math.max(0, Math.min(total - 1, Math.round(track.scrollLeft / step)));
+      currentEl.textContent = String(idx + 1).padStart(2, '0');
+      dots.forEach(function (d, i) { d.classList.toggle('active', i === idx); });
+      ticking = false;
+    });
+  }, { passive: true });
+
+  const videoSlides = [];
+
+  slides.forEach(function (slide) {
+    const soundBtn = slide.querySelector('.slide-sound');
+    const video = slide.querySelector('video');
+    const durationEl = slide.querySelector('.slide-duration');
+
+    if (!video) return;
+    videoSlides.push(slide);
+
+    if (durationEl) {
+      video.addEventListener('loadedmetadata', function () {
+        const total = Math.round(video.duration);
+        const mins = Math.floor(total / 60);
+        const secs = String(total % 60).padStart(2, '0');
+        durationEl.textContent = mins + ':' + secs;
+      });
+    }
+
+    if (soundBtn) {
+      soundBtn.addEventListener('click', function () {
+        const willUnmute = video.muted;
+        // Only one slide plays with sound at a time
+        videoSlides.forEach(function (s) {
+          const v = s.querySelector('video');
+          const b = s.querySelector('.slide-sound');
+          v.muted = true;
+          if (b) { b.innerHTML = '<i class="bi bi-volume-mute-fill"></i>'; b.setAttribute('aria-pressed', 'false'); }
+        });
+        video.muted = !willUnmute;
+        soundBtn.innerHTML = video.muted ? '<i class="bi bi-volume-mute-fill"></i>' : '<i class="bi bi-volume-up-fill"></i>';
+        soundBtn.setAttribute('aria-pressed', String(!video.muted));
+      });
+    }
+  });
+
+  if (!prefersReducedMotion && videoSlides.length) {
+    const videoObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        const video = entry.target.querySelector('video');
+        if (!video) return;
+        if (entry.isIntersecting) {
+          video.play().catch(function () {});
+        } else {
+          video.pause();
+        }
+      });
+    }, { root: track, threshold: 0.6 });
+
+    videoSlides.forEach(function (slide) { videoObserver.observe(slide); });
+  } else {
+    videoSlides.forEach(function (slide) { slide.querySelector('video').pause(); });
+  }
+})();
+
+/* ===== CONFIGURACIÓN DE WHATSAPP ===== */
 const NUMERO_WHATSAPP = "528441841404"; // Formato: código país + número (sin espacios, sin +)
 
-// Ejemplos de formato correcto:
-// México: "5212345678901" (52 + 10 dígitos)
-// España: "34612345678" (34 + 9 dígitos)  
-// Argentina: "5491123456789" (54 + 11 dígitos)
-// Colombia: "573001234567" (57 + 10 dígitos)
+const contactForm = document.querySelector('.contact-form');
 
-// Form submission - Envío a WhatsApp
-document.querySelector('.contact-form').addEventListener('submit', function(e) {
+contactForm.addEventListener('submit', function (e) {
   e.preventDefault();
-  
-  // Validar que todos los campos estén llenos
+
   const campos = this.querySelectorAll('input[required], select[required], textarea[required]');
   let formularioValido = true;
-  
-  campos.forEach(campo => {
+
+  campos.forEach(function (campo) {
     if (!campo.value.trim()) {
       formularioValido = false;
       campo.style.borderColor = '#ff4444';
-      campo.style.boxShadow = '0 0 0 0.2rem rgba(255, 68, 68, 0.25)';
+      campo.style.boxShadow = '0 0 0 0.2rem rgba(255, 68, 68, 0.2)';
     } else {
       campo.style.borderColor = '';
       campo.style.boxShadow = '';
     }
   });
-  
+
   if (!formularioValido) {
     mostrarNotificacion('Por favor, completa todos los campos requeridos', 'error');
     return;
   }
-  
-  // Obtener los datos del formulario
+
   const nombre = this.querySelector('input[type="text"]').value.trim();
   const email = this.querySelector('input[type="email"]').value.trim();
   const telefono = this.querySelector('input[type="tel"]').value.trim();
   const tipoEvento = this.querySelector('select').value;
   const mensaje = this.querySelector('textarea').value.trim();
-  
-  // Obtener fecha y hora actual
+
   const ahora = new Date();
-  const fecha = ahora.toLocaleDateString('es-MX', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
-  const hora = ahora.toLocaleTimeString('es-MX', {
-    hour: '2-digit',
-    minute: '2-digit'
-  });
-  
-  // Crear el mensaje para WhatsApp con formato elegante
+  const fecha = ahora.toLocaleDateString('es-MX', { year: 'numeric', month: 'long', day: 'numeric' });
+  const hora = ahora.toLocaleTimeString('es-MX', { hour: '2-digit', minute: '2-digit' });
+
   const mensajeWhatsApp = `🎉 *NUEVA COTIZACIÓN - RECEPCIONES FÁTIMA*
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -583,35 +644,27 @@ ${mensaje}
 
 ¡Hola! Me interesa conocer más sobre sus servicios para mi evento. ¿Podrían enviarme información detallada y cotización?`;
 
-  // Codificar el mensaje para URL
   const mensajeCodificado = encodeURIComponent(mensajeWhatsApp);
-  
-  // Crear la URL de WhatsApp
   const urlWhatsApp = `https://wa.me/${NUMERO_WHATSAPP}?text=${mensajeCodificado}`;
-  
-  // Mostrar notificación de éxito
-  mostrarNotificacion('¡Perfecto! Te estamos redirigiendo a WhatsApp...', 'success');
-  
-  // Esperar un momento y abrir WhatsApp
-  setTimeout(() => {
-// Detectar si es un dispositivo móvil
-const esMovil = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-if (esMovil) {
-  window.location.href = urlWhatsApp; // Redirige en la misma ventana
-} else {
-  window.open(urlWhatsApp, '_blank'); // Abre en nueva pestaña (escritorio)
-}
-}, 1500);
 
-  
-  // Limpiar el formulario después de enviar
-  setTimeout(() => {
-    this.reset();
+  mostrarNotificacion('¡Perfecto! Te estamos redirigiendo a WhatsApp...', 'success');
+
+  setTimeout(function () {
+    const esMovil = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (esMovil) {
+      window.location.href = urlWhatsApp;
+    } else {
+      window.open(urlWhatsApp, '_blank');
+    }
+  }, 1500);
+
+  const formRef = this;
+  setTimeout(function () {
+    formRef.reset();
     mostrarNotificacion('Formulario limpiado. ¡Esperamos tu mensaje en WhatsApp!', 'info');
   }, 2000);
 });
 
-// Función para obtener el nombre completo del tipo de evento
 function obtenerNombreEvento(valor) {
   const eventos = {
     'boda': '💒 Boda',
@@ -624,25 +677,16 @@ function obtenerNombreEvento(valor) {
   return eventos[valor] || valor;
 }
 
-// Función para mostrar notificaciones elegantes
-function mostrarNotificacion(mensaje, tipo = 'info') {
-  // Remover notificación anterior si existe
-  const notificacionAnterior = document.querySelector('.notification-toast');
-  if (notificacionAnterior) {
-    notificacionAnterior.remove();
-  }
-  
-  // Crear nueva notificación
+function mostrarNotificacion(mensaje, tipo) {
+  tipo = tipo || 'info';
+  const anterior = document.querySelector('.notification-toast');
+  if (anterior) anterior.remove();
+
   const notificacion = document.createElement('div');
   notificacion.className = `notification-toast notification-${tipo}`;
-  
-  const iconos = {
-    'success': '✅',
-    'error': '❌',
-    'info': 'ℹ️',
-    'warning': '⚠️'
-  };
-  
+
+  const iconos = { success: '✅', error: '❌', info: 'ℹ️', warning: '⚠️' };
+
   notificacion.innerHTML = `
     <div class="notification-content">
       <span class="notification-icon">${iconos[tipo]}</span>
@@ -650,113 +694,34 @@ function mostrarNotificacion(mensaje, tipo = 'info') {
       <button class="notification-close" onclick="this.parentElement.parentElement.remove()">×</button>
     </div>
   `;
-  
-  // Agregar estilos
-  notificacion.style.cssText = `
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 10000;
-    background: ${tipo === 'success' ? 'linear-gradient(135deg, #10b981, #059669)' : 
-                 tipo === 'error' ? 'linear-gradient(135deg, #ef4444, #dc2626)' :
-                 tipo === 'warning' ? 'linear-gradient(135deg, #f59e0b, #d97706)' :
-                 'linear-gradient(135deg, #3b82f6, #2563eb)'};
-    color: white;
-    padding: 1rem 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    transform: translateX(400px);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    max-width: 400px;
-    backdrop-filter: blur(10px);
-  `;
-  
-  notificacion.querySelector('.notification-content').style.cssText = `
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  `;
-  
-  notificacion.querySelector('.notification-close').style.cssText = `
-    background: rgba(255, 255, 255, 0.2);
-    border: none;
-    color: white;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    margin-left: auto;
-  `;
-  
+
   document.body.appendChild(notificacion);
-  
-  // Animar entrada
-  setTimeout(() => {
-    notificacion.style.transform = 'translateX(0)';
-  }, 100);
-  
-  // Auto-remover después de 5 segundos
-  setTimeout(() => {
+
+  setTimeout(function () { notificacion.classList.add('show'); }, 20);
+
+  setTimeout(function () {
     if (notificacion.parentElement) {
-      notificacion.style.transform = 'translateX(400px)';
-      setTimeout(() => notificacion.remove(), 300);
+      notificacion.classList.remove('show');
+      setTimeout(function () { notificacion.remove(); }, 300);
     }
   }, 5000);
 }
 
-// Validación en tiempo real de campos
-document.querySelectorAll('.contact-form input, .contact-form select, .contact-form textarea').forEach(campo => {
-  campo.addEventListener('blur', function() {
+document.querySelectorAll('.contact-form input, .contact-form select, .contact-form textarea').forEach(function (campo) {
+  campo.addEventListener('blur', function () {
     if (this.hasAttribute('required') && !this.value.trim()) {
       this.style.borderColor = '#ff4444';
-      this.style.boxShadow = '0 0 0 0.2rem rgba(255, 68, 68, 0.25)';
+      this.style.boxShadow = '0 0 0 0.2rem rgba(255, 68, 68, 0.2)';
     } else {
       this.style.borderColor = '';
       this.style.boxShadow = '';
     }
   });
-  
-  campo.addEventListener('input', function() {
+
+  campo.addEventListener('input', function () {
     if (this.style.borderColor === 'rgb(255, 68, 68)') {
       this.style.borderColor = '';
       this.style.boxShadow = '';
-    }
-  });
-});
-
-// Parallax effect for hero section
-window.addEventListener('scroll', function() {
-  const scrolled = window.pageYOffset;
-  const parallax = document.querySelector('.bg-video');
-  const speed = scrolled * 0.5;
-  if (parallax) {
-    parallax.style.transform = `translateY(${speed}px)`;
-  }
-});
-
-// Add interactive hover effects
-document.querySelectorAll('.service-card').forEach(card => {
-  card.addEventListener('mouseenter', function() {
-    this.style.transform = 'translateY(-15px) scale(1.02)';
-  });
-  
-  card.addEventListener('mouseleave', function() {
-    this.style.transform = 'translateY(0) scale(1)';
-  });
-});
-
-// Actualizar todos los enlaces de WhatsApp en la página
-document.addEventListener('DOMContentLoaded', function() {
-  const enlacesWhatsApp = document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]');
-  enlacesWhatsApp.forEach(enlace => {
-    const href = enlace.getAttribute('href');
-    if (href.includes('wa.me/') || href.includes('whatsapp')) {
-      // Actualizar con el número configurado
-      enlace.setAttribute('href', `https://wa.me/${NUMERO_WHATSAPP}`);
     }
   });
 });
